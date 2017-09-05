@@ -1,67 +1,157 @@
-/*FONTS*/
-/*<style>
-@import url('https://fonts.googleapis.com/css?family=Lato:300|Lobster');
-</style>*/
-/*HEADER STYLES*/
-.navbar-inverse {
-    background-color: transparent;
-    border: none;
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url(http://fonts.googleapis.com/css?family=Raleway:700,400,300);
+/* UNIVERSAL */
+* {
+  transition-duration: 0.2s;
 }
-
-.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
-  background-color: rgba(51, 51, 51, 0.5);
+.min-height {
+  min-height: 600px;
 }
-
-.navbar-inverse .navbar-nav>li>a {
-  color: #FFF;
-   text-shadow: 1px 1px 2px #333;
+.primary-font {
+  font-family: 'Lobster', serif;
 }
-
-.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
-  background-color: rgba(51, 51, 51, 0.25);
+.secondary-font {
+  font-family: 'Raleway', Sans-Serif;
+}
+.white-text {
+  color: #FFFFFF;
+}
+.orange-text {
   color: #F8512F;
 }
-
-
-/*Carousel Styles*/
-.item {
-  height: 425px;
-  background-size: cover;
-  background-position: center;
+.thin-text {
+  font-weight: 300;
+}
+.thick-text {
+  font-weight: 700;
+}
+.orange-bg {
+  background-color: #F8512F;
+}
+/*=== nav === */
+.nav li a:hover {
+  background-color: transparent;
+}
+.navbar-default {
+   background-color: transparent;
+   border-color: transparent;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #FFFFFF;
+  background-color: rgba(17, 17, 17, .5);
+}
+.navbar-default .navbar-nav>li>a {
+  color: #FCFCFC;
+  text-shadow: 1px 1px 2px #0a0a0a;
+}
+.navbar-default .navbar-nav  li  a:hover,
+.navbar-default .navbar-nav  li  a:focus {
+    color: #F8512F;
+    background-color: rgba(17, 17, 17, .2);
+}
+nav.navbar {
+  position: absolute;
+  top: 100;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+.navbar-brand>img {
+  margin-top: -7px;
+}
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+/* Carousel base class */
+.carousel {
+  /*height: 600px; we do not need this*/
+  margin-bottom: 60px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+  padding-bottom: 140px;
+}
+/* Declare heights because of positioning of img element */
+.carousel-inner .item {
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+}
+.main_img1 {
+    background-image: url(../img/wood-2.jpg);
+}
+.main_img2 {
+    background-image: url(../img/restaurant-2.jpg);
+}
+.main_img3 {
+    background-image: url(../img/farm-2.jpg);
+}
+.main_logo {
+    max-height: 300px;
+}
+.btn-primary.orange-bg {
+  border-color: transparent;
+}
+.btn-primary.orange-bg:hover {
+  background-color: #d34326;
+  border-color: transparent;
+}
+.carousel-caption p {
+  color: #F7F7F7;
+  font-size: 16px;
 }
 
-.flex-wrapper {
-  height: 425px;/*or 100%*/
-  diplay: flex;
+  /*OUR STORY*/
+#our_story .row {
+  margin-top: 30px;
+}
+
+#our_story h1 {
+  font-size: 6em;
+  margin-top: 0;
+  text-shadow: 1px 1px 2px #515151;
+}
+
+#our_story h3 {
+  font-size: 2em;
+  margin-top: 0;
+}
+
+.story-year {
+  font-family: 'Playfair Display', serif;
+  font-size: 200px;
+  position: absolute;
+  z-index: -1;
+  color: rgba(149, 147, 147, 0.2);
+}
+
+#review {
+    background-image: url('../img/food_review.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#review .center {
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-#wood-background {
-  background-image: url('../img/wood-2.jpg');
+.review-container {
+  padding: 10px 15px;
+  background-color: rgba(20, 20, 20, 0.6);
+  border-radius: 4px;
 }
 
-#carousel-logo {
-  height: 250px;
+.review-container h1 {
+  font-size: 5em;
+  text-shadow: 1px 1px 5px #0a0a0a;
 }
 
-#seating-background {
-  background-image: url('../img/restaurant-2.jpg');
-}
-
-#farm-background {
-  background-image: url('../img/farm-2.jpg');
-}
-
-.carousel-caption {
-  margin-bottom: 10em;
-}
-
-button.btn-warning {
-  background-color: #F8512F;
-  border-color: #F8512F;
-}
-
-button.btn-warning:hover {
-  background-color: #D34326;
-  border-color: #D34326;
+.review-container p {
+  font-size: 2em;
+  text-shadow: 1px 1px 5px #0a0a0a;
 }
